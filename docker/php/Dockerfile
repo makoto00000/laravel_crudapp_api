@@ -11,6 +11,6 @@ RUN cd /usr/bin && curl -s http://getcomposer.org/installer | php && ln -s /usr/
 
 COPY ./src/. /var/www/html
 
-# RUN composer install
+RUN composer install
 
 WORKDIR /var/www/html
