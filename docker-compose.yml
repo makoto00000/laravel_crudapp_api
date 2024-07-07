@@ -17,8 +17,9 @@ services:
       - php
       - db
   db:
-    image: mysql:8.0.36
     container_name: db
+    build:
+      dockerfile: "./docker/db/Dockerfile"
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: database
